@@ -1,0 +1,19 @@
+# Ignore arquivos de configuração
+*.env
+config/*.json
+
+# Ignore diretórios
+node_modules/
+vendor/
+
+# Ignore arquivos temporários do sistema
+*.log
+*.tmp
+
+# Ignore arquivos do editor
+.vscode/
+.idea/
+
+# Ignore senhas e chaves privadas
+*.pem
+*.key

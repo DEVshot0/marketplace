@@ -1,0 +1,20 @@
+# Use a imagem do Node
+FROM node:16
+
+# Crie o diretório de trabalho no container
+WORKDIR /app
+
+# Copie o package.json e o package-lock.json
+COPY package*.json ./
+
+# Instale as dependências
+RUN npm install
+
+# Copie o restante do código do backend
+COPY . .
+
+# Exponha a porta que o NestJS usa
+EXPOSE 3000
+
+# Comando para iniciar o aplicativo
+CMD ["npm", "run", "start:dev"]
